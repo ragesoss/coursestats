@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Check page views for an article</h2>
+<p>This takes a little while, especially if the date range is wide.</p>
+<form action="articleviewtrend.py">
+Article: <input type="text" name="article" value="selfie"><br>
+Start year: <input type="text" name="startyear" value="2014"><br>
+Start month: <input type="text" name="startmonth" value ="1"><br>
+End year: <input type="text" name="endyear" value="2014"><br>
+End month: <input type="text" name="endmonth" value ="6"><br>
+Language code: <input type="text" name="language" value="en"><br>
+<input type="submit" value="Submit">
+</form>
+
+<h2>Check page views for a whole course</h2>
+<p>This checks page views for each assigned article. It can take quite a while and you might not ever see the results, if there are a lot of articles or the date range is wide.</p>
+<form action="articleviewtrend.py">
+Course ID: <input type="text" name="courseid" value="66"><br>
+Start year: <input type="text" name="startyear" value="2014"><br>
+Start month: <input type="text" name="startmonth" value ="1"><br>
+End year: <input type="text" name="endyear" value="2014"><br>
+End month: <input type="text" name="endmonth" value ="6"><br>
+Language code: <input type="text" name="language" value="en"><br>
+<input type="submit" value="Submit">
+</form>
+
+<h2>List articles a user edited</h2>
+<p>This returns articles edited from the beginning of the start month to the beginning of the end month, so it doesn't include articles edited only during the end month.</p>
+<form action="articlesedited.py">
+User: <input type="text" name="user" value="Ragesoss"><br>
+Start date (YYYYMM): <input type="text" value="201001"><br>
+End date (YYYYMM): <input type="text" value="202001"><br>
+Language code: <input type="text" name ="language" value="en"><br>
+<input type="submit" value="Submit">
+</form>
+
+<h2>List articles edited by students in one or more courses</h2>
+<p>This lists *all* articles touched by students in the course(s), not just assigned articles. It returns articles edited only through the *start* of the end month.</p>
+<form action="articlesedited.py">
+Course IDs (pipe separated): <input type="text" name="courseids" value="72|35|4|77"><br>
+Start date (YYYYMM): <input type="text" value="201001"><br>
+End date (YYYYMM): <input type="text" value="202001"><br>
+Language code: <input type="text" name="language" value="en"><br>
+<input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
