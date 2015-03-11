@@ -53,7 +53,7 @@ f = open("/data/project/coursestats/dbpassword", 'r')
 dbpassword = f.read().rstrip()
 f.close()
 
-if project == 'wikipedia'
+if project == 'wikipedia':
   project = 'wiki'
 
 db = MySQLdb.connect( language + "wiki.labsdb","s52158",dbpassword, language + project + "_p")
