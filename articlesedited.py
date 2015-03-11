@@ -13,6 +13,7 @@ print
 courseids = form.getvalue("courseids")
 user = form.getvalue("user")
 language = form.getvalue("language")
+project = form.getvalue("project")
 
 start = form.getvalue("start")
 end = form.getvalue("end")
@@ -52,7 +53,10 @@ f = open("/data/project/coursestats/dbpassword", 'r')
 dbpassword = f.read().rstrip()
 f.close()
 
-db = MySQLdb.connect( language + "wiki.labsdb","s52158",dbpassword, language + "wiki_p")
+if project == 'wikipedia'
+  project = 'wiki'
+
+db = MySQLdb.connect( language + "wiki.labsdb","s52158",dbpassword, language + project + "_p")
 cursor = db.cursor()
 cursor.execute(sql_query)
 articles_edited = cursor.fetchall()
