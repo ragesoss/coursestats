@@ -14,6 +14,8 @@ courseids = form.getvalue("courseids")
 user = form.getvalue("user")
 language = form.getvalue("language")
 project = form.getvalue("project")
+if project == None:
+    project = 'wiki'
 
 start = form.getvalue("start")
 end = form.getvalue("end")
