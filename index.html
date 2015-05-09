@@ -30,8 +30,8 @@ Language code: <input type="text" name="language" value="en"><br>
 <p>This returns articles edited from the beginning of the start month to the beginning of the end month, so it doesn't include articles edited only during the end month.</p>
 <form action="articlesedited.py">
 User: <input type="text" name="user" value="Ragesoss"><br>
-Start date (YYYYMM): <input type="text" value="201001"><br>
-End date (YYYYMM): <input type="text" value="202001"><br>
+Start date (YYYYMM): <input type="text" name ="start" value="201001"><br>
+End date (YYYYMM): <input type="text" name="end" value="202001"><br>
 Language code: <input type="text" name ="language" value="en"><br>
 Project: <input type="text" name ="project" value="wikipedia"><br>
 <input type="submit" value="Submit">
@@ -41,8 +41,8 @@ Project: <input type="text" name ="project" value="wikipedia"><br>
 <p>This lists *all* articles touched by students in the course(s), not just assigned articles. It returns articles edited only through the *start* of the end month.</p>
 <form action="articlesedited.py">
 Course IDs (pipe separated): <input type="text" name="courseids" value="72|35|4|77"><br>
-Start date (YYYYMM): <input type="text" value="201001"><br>
-End date (YYYYMM): <input type="text" value="202001"><br>
+Start date (YYYYMM): <input type="text" name="start" value="201001"><br>
+End date (YYYYMM): <input type="text" name="end" value="202001"><br>
 Language code: <input type="text" name="language" value="en"><br>
 <input type="submit" value="Submit">
 </form>
